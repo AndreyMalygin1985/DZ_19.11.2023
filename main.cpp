@@ -20,8 +20,7 @@ int main()
 	cin >> znamen;
 	cout << endl;
 
-	Fraction fraction;
-	fraction.inputFruction(chislit, znamen);
+	Fraction fraction(chislit, znamen);
 	fraction.show();
 
 	do {
@@ -30,31 +29,34 @@ int main()
 		cout << "[2] - Вычесть из дроби число." << endl;
 		cout << "[3] - Умножить дробь на число." << endl;
 		cout << "[4] - Разделить дробь на число." << endl;
-		cout << "[0] - Выход." << endl << endl;
 		cout << "Введите номер действия: ";
 		cin >> choice;
 		cout << endl;
 
 		switch (choice) {
 		case 1:
-			cout << "Введите число для сложения: " << endl;
+			cout << "Введите число для сложения:  ";
 			cin >> numb;
-			fraction.addition(numb);
+			fraction.operator+(numb);
+			fraction.show();
 			break;
 		case 2:
-			cout << "Введите число для вычитания: " << endl;
+			cout << "Введите число для вычитания:  ";
 			cin >> numb;
-			fraction.subtraction(numb);
+			fraction.operator-(numb);
+			fraction.show();
 			break;
 		case 3:
-			cout << "Введите число для умножения: " << endl;
+			cout << "Введите число для умножения:  ";
 			cin >> numb;
-			fraction.multiplication(numb);
+			fraction.operator*(numb);
+			fraction.show();
 			break;
 		case 4:
-			cout << "Введите число для деления: " << endl;
+			cout << "Введите число для деления:  ";
 			cin >> numb;
-			fraction.division(numb);
+			fraction.operator/(numb);
+			fraction.show();
 			break;
 		default:
 			cout << "Нет такой операции!" << endl;

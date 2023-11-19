@@ -7,16 +7,16 @@ class Fraction {
 	uint32_t denominator;
 
 public:
-	friend const Fraction operator+(const Fraction& set, uint32_t numb);
-	friend const Fraction operator+(uint32_t numb, const Fraction& set);
-	
+	Fraction(uint32_t chislit, uint32_t znamen) {};
+		
+	Fraction operator+(uint32_t numb);
+	Fraction operator-(uint32_t numb);
+	Fraction operator*(uint32_t numb);
+	Fraction operator/(uint32_t numb);
 
-
-	void inputFruction(uint32_t chislit, uint32_t znamen);
 	void show();
-	static const Fraction addition(uint32_t numb);
-	//void addition(uint32_t numb);
+	/*void addition(uint32_t numb);
 	void subtraction(uint32_t numb);
 	void multiplication(uint32_t numb);
-	void division(uint32_t numb);
+	void division(uint32_t numb);*/
 };
